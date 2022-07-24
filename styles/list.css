@@ -1,0 +1,27 @@
+ul>li>a{
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.hotels > img{
+    height: 150px;
+    width: 150px;
+}
+
+.hotels{
+    display: inline-block;
+    margin: 2%;
+    margin-left: 4%;
+    background-color: rgb(132,136,139);
+    width: 40%;
+}
+
+#map_view{
+    display: none;
+}

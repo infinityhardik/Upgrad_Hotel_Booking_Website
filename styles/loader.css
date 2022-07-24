@@ -1,0 +1,14 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#main{
+    border: 12px #f3f3f3 solid;
+    border-top: 12px #444444 solid;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}

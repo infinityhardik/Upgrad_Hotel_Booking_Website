@@ -1,0 +1,14 @@
+#content > img{
+    height: 500px;
+    width: 500px;
+    margin-top: 2%;
+}
+
+#content{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+#customer_details{
+    margin-bottom: 1%;
+}
