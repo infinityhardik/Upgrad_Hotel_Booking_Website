@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 
+    <link rel="stylesheet" href="styles/common.css">
     <style>
-        #images > img{
-            height: 150px;
-            width: 150px;
+
+        #city_cards{
+            display: flex;
+            margin-left: 15%;
+            margin-right: 15%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4%;
         }
-        #images > * > img{
+
+        #city_cards > img{
             height: 150px;
             width: 150px;
+            border-radius: 10%;
+        }
+
+        #city_cards > * > img{
+            height: 150px;
+            width: 150px;
+            border-radius: 10%;
         }
 
         body{
             min-height: 100vh;
             min-width: 100vw;
+        }
+
+        #search_bar{
+            background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
+            height: 380px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
     </style>
 </head>
@@ -35,7 +57,7 @@
                 </form>
             </div>
             
-            <div id="images">
+            <div id="city_cards">
                 <a href="list.html" >
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="City Image 1">
                 </a>
