@@ -9,14 +9,38 @@
 <body>
     <div id="main">
         <div id="header">
-            <img src="assests/images/logo.png" alt="logo" height="100px" width="150px">
-            <a href="login.html" target="_blank">Login</a>
+            <a href="index.html">
+                <img src="assests/images/logo.png" alt="logo" height="100px" width="150px">
+            </a>
+            <a href="login.html" target="_self">Login</a>
         </div>
         
         <div id="content">
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
-            <br>
-            <a href="payment.html">Book Now</a>
+            <div id="customer_details">
+                <form action="payment.html">
+                    <label for="adults">Adults:</label>
+                    <input type="number" id="adults" name="adults" min="1" value="1" >
+                    <br>
+                    
+                    <label for="customer_name">Name:</label>
+                    <input type="text" id="customer_name" name="customer_name" required>
+                    <br>
+                    
+                    <label for="from_date" >From Date:</label>
+                    <input type="date" id="from_date" name="from_date"/>
+                    <br>
+                    
+                    <label for="to_date" >To Date:</label>
+                    <input type="date" id="to_date" name="to_date"/>
+                    <br>
+                    
+                    <label for="price" >Total:</label>
+                    <input type="text" id="price" name="price" readonly>
+                    <br>
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
             <h2>Radisson Blu Hotel</h2>
             <p>RATING</p>
             <p>5 star</p>
@@ -28,13 +52,13 @@
                 <li>Fitness center</li>
                 <li>Pool</li>
             </ul>
-
+            
             <h5>DESCRIPTION</h5>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo labore optio fugit a quam deserunt officiis facilis, repellendus, nisi ipsam rem possimus placeat cupiditate! Quos commodi sed esse dignissimos deserunt?</p>
-
+            
         </div>
         <div id="footer">
-            <a href="contact.html" target="_blank">Contact Us</a>
+            <a href="contact.html" target="_self">Contact Us</a>
             
             <div id="social_media">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook logo" height="20px" width="22px"></a>
