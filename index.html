@@ -5,13 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+
+    <style>
+        #images > img{
+            height: 150px;
+            width: 150px;
+        }
+        #images > * > img{
+            height: 150px;
+            width: 150px;
+        }
+
+        body{
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
-        <div id="header">
-            <img src="assests/images/logo.png" alt="logo" height="100px" width="150px">
+        <header>
+            <img src="assests/images/logo.png" alt="logo" height="60px" width="60px">
             <a href="login.html" target="_self">Login</a>
-        </div>
+        </header>
         <div id="content">
             <div id="search_bar">
                 <form action="index.html">
@@ -21,18 +37,19 @@
             
             <div id="images">
                 <a href="list.html" >
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="City Image 1" height="300px" width="300px">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="City Image 1">
                 </a>
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="City Image 2" height="300px" width="300px">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="City Image 3" height="300px" width="300px">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="City Image 4" height="300px" width="300px">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="City Image 2">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="City Image 3">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="City Image 4">
             </div>
             
             <div id="view_more">
                 <a href="index.html">View more >></a>
             </div>
         </div>
-        <div id="footer">
+
+        <footer>
             <a href="contact.html" target="_self">Contact Us</a>
             
             <div id="social_media">
@@ -42,7 +59,7 @@
             </div>
             
             <div>&copy; 2020 ROOM SEARCH PVT. LTD.</div>
-        </div>
+        </footer>
     </div>
 </body>
 </html>

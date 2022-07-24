@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
+    <style>
+        #content > img{
+            height: 500px;
+            width: 500px;
+        }
+
+        body{
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+    </style>
 </head>
 <body>
     <div id="main">
-        <div id="header">
+        <header>
             <a href="index.html">
-                <img src="assests/images/logo.png" alt="logo" height="100px" width="150px">
+                <img src="assests/images/logo.png" alt="logo" height="60px" width="60px">
             </a>
             <a href="login.html" target="_self">Login</a>
-        </div>
+        </header>
         
         <div id="content">
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
@@ -28,11 +39,11 @@
                     <br>
                     
                     <label for="from_date" >From Date:</label>
-                    <input type="date" id="from_date" name="from_date"/>
+                    <input type="date" id="from_date" name="from_date" required/>
                     <br>
                     
                     <label for="to_date" >To Date:</label>
-                    <input type="date" id="to_date" name="to_date"/>
+                    <input type="date" id="to_date" name="to_date" required/>
                     <br>
                     
                     <label for="price" >Total:</label>
@@ -57,7 +68,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo labore optio fugit a quam deserunt officiis facilis, repellendus, nisi ipsam rem possimus placeat cupiditate! Quos commodi sed esse dignissimos deserunt?</p>
             
         </div>
-        <div id="footer">
+        
+        <footer>
             <a href="contact.html" target="_self">Contact Us</a>
             
             <div id="social_media">
@@ -67,7 +79,8 @@
             </div>
             
             <div>&copy; 2020 ROOM SEARCH PVT. LTD.</div>
-        </div>
+        </footer>
+
     </div>
 </body>
 </html>
