@@ -1,11 +1,14 @@
+b{
+    font-family: 'Ubuntu', cursive;
+}
 
-#hotel > img{
-    height: 500px;
-    width: 500px;
+#hotel_img > img{
+    max-height: 300px;
+    max-width: 270px;
 }
 
 #hotel{
-    display: block;
+    display: flex;
     background-color: rgb(132,136,139);
     width: 50%;
     height: 20%;
@@ -14,13 +17,29 @@
     margin-bottom: 2%;
 }
 
+#hotel_description{
+    margin-left: 2%;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 #customer_details{
     margin: 2% 2% 2% 2%;
 }
 
 #tariff_details{
     margin: 2% 2% 2% 2%;
+    padding: 1% 2% 1% 2%;
+}
+
+#payment_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     border: 1px black solid;
     border-radius: 5px;
-    padding: 1% 2% 1% 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rosybrown;
 }

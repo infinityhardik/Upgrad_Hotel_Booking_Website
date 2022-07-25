@@ -19,46 +19,60 @@
         </header>
         
         <div id="content">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
-            <div id="customer_details">
-                <form action="payment.html">
-                    <label for="adults">Adults:</label>
-                    <input type="number" id="adults" name="adults" min="1" value="1" >
-                    <br>
-                    
-                    <label for="customer_name">Name:</label>
-                    <input type="text" id="customer_name" name="customer_name" required>
-                    <br>
-                    
-                    <label for="from_date" >From Date:</label>
-                    <input type="date" id="from_date" name="from_date" required/>
-                    <br>
-                    
-                    <label for="to_date" >To Date:</label>
-                    <input type="date" id="to_date" name="to_date" required/>
-                    <br>
-                    
-                    <label for="price" >Total:</label>
-                    <input type="text" id="price" name="price" readonly>
-                    <br>
-                    <button type="submit">Book Now</button>
-                </form>
+            <div class="box">
+                <div id="hotel_img">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
+                </div>
+                <div id="customer_details">
+                    <form action="payment.html">
+                        <div class="form_row">
+                            <label for="adults">Adults:</label>
+                            <input type="number" id="adults" name="adults" min="1" value="1" >
+                        </div>
+                        
+                        <div class="form_row">
+                            <label for="customer_name">Name:</label>
+                            <input type="text" id="customer_name" name="customer_name" required>
+                        </div>
+                        
+                        <div class="form_row">
+                            <label for="from_date" >From Date:</label>
+                            <input type="date" id="from_date" name="from_date" required/>
+                        </div>
+                        
+                        <div class="form_row">
+                            <label for="to_date" >To Date:</label>
+                            <input type="date" id="to_date" name="to_date" required/>
+                        </div>
+                        
+                        <div class="form_row">
+                            <label for="price" >Total:</label>
+                            <input type="text" id="price" name="price" readonly>
+                        </div>
+                        
+                        <div class="form_row">
+                            <button type="submit">Book Now</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <h2>Radisson Blu Hotel</h2>
-            <p>RATING</p>
-            <p>5 star</p>
-            <p>AMENITIES</p>
-            <ul>
-                <li>Room Service</li>
-                <li>Restaurant</li>
-                <li>Business center</li>
-                <li>Fitness center</li>
-                <li>Pool</li>
-            </ul>
-            
-            <h5>DESCRIPTION</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo labore optio fugit a quam deserunt officiis facilis, repellendus, nisi ipsam rem possimus placeat cupiditate! Quos commodi sed esse dignissimos deserunt?</p>
-            
+
+            <div id="description">
+                <h2>Radisson Blu Hotel</h2>
+                <h5>RATING</h5>
+                <p>5 star</p>
+                <h5>AMENITIES</h5>
+                <ul>
+                    <li>Room Service</li>
+                    <li>Restaurant</li>
+                    <li>Business center</li>
+                    <li>Fitness center</li>
+                    <li>Pool</li>
+                </ul>
+                
+                <h5>DESCRIPTION</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo labore optio fugit a quam deserunt officiis facilis, repellendus, nisi ipsam rem possimus placeat cupiditate! Quos commodi sed esse dignissimos deserunt?</p>
+            </div>
         </div>
         
         <footer>

@@ -1,7 +1,11 @@
-#content > img{
-    height: 500px;
-    width: 500px;
+#main{
+    display: flex;
+}
+#content > * > * > img{
+    max-height: 350px;
+    max-width: 500px;
     margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #content{
@@ -9,6 +13,45 @@
     margin-right: 4%;
 }
 
-#customer_details{
-    margin-bottom: 1%;
+.box{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    max-height: 400px;
+    border: 1px black solid;
+}
+
+.box > #hotel_img{
+    border-right: 1px black solid;
+    flex : 2;
+    display: flex;
+    justify-content: center;
+}
+
+.box > #customer_details{
+    flex: 1;
+}
+
+
+.form_row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.8em;
+}
+
+.form_row > label {
+    padding: 0.5em 1em 1em 0;
+    flex: 1;
+}
+
+.form_row > input {
+    flex: 2;
+}
+
+button{
+    width: auto;
+}
+
+h5{
+    font-family: 'Ubuntu', cursive;
 }
