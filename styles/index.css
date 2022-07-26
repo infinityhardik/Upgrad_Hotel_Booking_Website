@@ -30,11 +30,11 @@
     object-position: center;
 }
 
-.container{
+.cards{
     position: relative;
 }
 
-.container > .city_name{
+.cards > .city_name{
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -46,14 +46,9 @@
     opacity: 0;
 }
 
-.container > .city_name:hover{
+.cards > .city_name:hover{
     opacity: 1;
     box-shadow: 10px 10px 10px grey;
-}
-
-#view_more>a {
-    display: flex;
-    justify-content: center;
 }
 
 #search_bar{

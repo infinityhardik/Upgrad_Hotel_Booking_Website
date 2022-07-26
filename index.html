@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
     
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
@@ -13,7 +17,7 @@
     <div id="main">
         <header>
             <img src="assests/images/logo.png" alt="logo" height="60px" width="60px">
-            <a href="login.html" target="_self">Login</a>
+            <button class="btn btn-light btn-sm" data-toggle="modal" data-target="#login-modal">LOGIN</button> 
         </header>
         <div id="content">
             <div id="search_bar">
@@ -24,35 +28,41 @@
             
             <div id="city_cards">
                 <a href="list.html" >
-                    <div class="container">
+                    <div class="cards">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="City Image 1">
                         <div class="city_name">Delhi</div>
                     </div>
                 </a>
                 
-                <div class="container">
+                <div class="cards">
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="City Image 2">
                     <div class="city_name">Goa</div>
                 </div>
                 
-                <div class="container">
+                <div class="cards">
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="City Image 3">
                     <div class="city_name">Hyderabad</div>
                 </div>
                 
-                <div class="container">
+                <div class="cards">
                     <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="City Image 4">
                     <div class="city_name">Kolkata</div>
                 </div>
             </div>
             
-            <div id="view_more">
-                <a href="index.html">View more >></a>
+            <div>
+                <div class="d-flex justify-content-center align-items-center container">
+                    <a href="index.html">
+                        <div class="btn btn-secondary text-center" id="view_more">
+                            View more
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
         
         <footer>
-            <a href="contact.html" target="_self">Contact Us</a>
+            <div class="btn btn-info btn-sm" data-toggle="modal" data-target="#contact-modal">Contact Us</div>
             
             <div id="social_media">
                 <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook logo" height="20px" width="22px"></a>
@@ -62,6 +72,87 @@
             
             <div>&copy; 2020 ROOM SEARCH PVT. LTD.</div>
         </footer>
+    </div>
+    
+    <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="example-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="example-modal-label">Please Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="d-flex justify-content-center align-items-center container ">
+                            <div class="form-group">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-auto">
+                                        <label for="example-input-email" class="col-form-label">Username:</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control" id="example-input-email" aria-describedby="emailHelp" placeholder="Enter Username" autocomplete="on" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center container ">
+                            <div class="form-group">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-auto">
+                                        <label for="example-input-password" class="col-form-label">Password:</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <input type="password" class="form-control" id="example-input-password" placeholder="Enter Password" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Us Modal-->
+    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="example-modal-label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="example-modal-label">Get in touch</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>Thank you for reaching out!!!</div>
+                    <div>Please enter your e-mail and we will get back to you.</div>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-auto">
+                                    <label for="example-input-email" class="col-form-label">Email:</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" class="form-control" id="example-input-email" aria-describedby="emailHelp" placeholder="Enter your email id" autocomplete="on" required>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

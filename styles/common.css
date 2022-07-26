@@ -18,7 +18,7 @@ header{
     justify-content: space-between;
 }
 
-header > a{
+header > button{
     margin-right: 2%;
 }
 
@@ -49,7 +49,7 @@ footer{
     margin-right: 2%;
 }
 
-footer > a {
+footer > div:first-child {
     margin-left: 2%;
 }
 

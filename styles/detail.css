@@ -36,11 +36,10 @@
 .form_row {
     display: flex;
     justify-content: space-evenly;
-    padding: 0.8em;
+    padding: 1em;
 }
 
 .form_row > label {
-    padding: 0.5em 1em 1em 0;
     flex: 1;
 }
 
