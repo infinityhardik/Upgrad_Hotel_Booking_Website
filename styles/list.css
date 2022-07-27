@@ -1,6 +1,6 @@
 .hotels_img > img{
-    height: 200px;
-    width: 200px;
+    max-height: 200px;
+    max-width: 200px;
 }
 
 .hotels{
@@ -13,7 +13,7 @@
 
 .hotels{
     display: inline-grid;
-    grid-template-columns: 200px auto 0;
+    grid-template-columns: 200px auto;
     column-gap: 10px;
 }
 
@@ -25,6 +25,28 @@
     color: orange;
 }
 
-#map_view{
-    display: none;
+@media only screen and (max-width: 576px) {
+    .hotels{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    div.hotels_description{
+        display: grid;
+        grid-template-rows: auto;
+        background-color: lightgrey;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width:768px) {
+    .hotels{
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 10px;
+    }
+
+    div.hotels_description{
+        display: grid;
+        grid-template-columns: 80vw;
+        background-color: lightgrey;
+    }
 }

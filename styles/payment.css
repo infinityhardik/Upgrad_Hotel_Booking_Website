@@ -43,3 +43,35 @@ b{
     margin-right: 2%;
     background-color: rosybrown;
 }
+
+@media only screen and (max-width: 576px) {
+    #payment_details{
+        flex-direction: column;
+    }
+    #tariff_details{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width:768px) {
+    #hotel{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(132,136,139);
+        margin: auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    #hotel_description{
+        margin-left: 2%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    #hotel_img > img{
+        max-height: 40vh;
+        max-width: 40vw;
+    }
+}
