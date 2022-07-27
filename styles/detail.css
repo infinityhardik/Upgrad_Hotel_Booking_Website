@@ -1,12 +1,6 @@
 #main{
     display: flex;
 }
-#content > * > * > img{
-    max-height: 350px;
-    max-width: 500px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
 
 #content{
     margin-left: 4%;
@@ -22,10 +16,9 @@
 }
 
 .box > #hotel_img{
+    margin-top: 20px;
     border-right: 1px black solid;
     flex : 2;
-    display: flex;
-    justify-content: center;
 }
 
 .box > #customer_details{
@@ -53,4 +46,18 @@ button{
 
 h5{
     font-family: 'Ubuntu', cursive;
+}
+
+.checked{
+    color: orange;
+}
+
+.carousel-inner > .carousel-item > img{ 
+    margin:auto; 
+    max-height: 350px;
+    max-width: 500px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  color: rosybrown;
 }

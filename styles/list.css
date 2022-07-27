@@ -20,3 +20,11 @@
 .hotels:hover{
     background-color: rosybrown;
 }
+
+.checked{
+    color: orange;
+}
+
+#map_view{
+    display: none;
+}
