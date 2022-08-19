@@ -4,18 +4,14 @@
 }
 
 .hotels{
-    display: inline-block;
+    display: inline-grid;
+    grid-template-columns: auto auto;
     margin: 2%;
     margin-left: 4%;
     background-color: lightgrey;
     width: 40%;
 }
 
-.hotels{
-    display: inline-grid;
-    grid-template-columns: 200px auto;
-    column-gap: 10px;
-}
 
 .hotels:hover{
     background-color: rosybrown;

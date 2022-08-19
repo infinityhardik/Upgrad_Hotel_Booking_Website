@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
@@ -18,64 +18,79 @@
 <body>
     <div id="main">
         <header></header>
-
+        
         <div id="content">
             <div id="search_bar">
                 <form action="index.html">
                     <input type="text" placeholder="City">
                 </form>
             </div>
-
+            
             <div id="city_cards">
                 <a href="list.html">
-                    <div class="cards">
+                    <div class="cards" onclick="cityList('delhi')">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
-                            alt="City Image 1">
+                        alt="City Image 1">
                         <div class="city_name">Delhi</div>
                     </div>
                 </a>
-
-                <div class="cards">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="City Image 2">
-                    <div class="city_name">Goa</div>
-                </div>
-
-                <div class="cards">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg"
+                
+                <a href="list.html">
+                    <div class="cards" onclick="cityList('goa')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="City Image 2">
+                        <div class="city_name">Goa</div>
+                    </div>
+                </a>
+                
+                <a href="list.html">
+                    <div class="cards" onclick="cityList('hyderabad')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg"
                         alt="City Image 3">
-                    <div class="city_name">Hyderabad</div>
-                </div>
-
-                <div class="cards">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
+                        <div class="city_name">Hyderabad</div>
+                    </div>
+                </a>
+                
+                <a href="list.html">
+                    <div class="cards" onclick="cityList('kolkata')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
                         alt="City Image 4">
-                    <div class="city_name">Kolkata</div>
-                </div>
-
-                <div class="cards" style="display:none;">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
+                        <div class="city_name">Kolkata</div>
+                    </div>
+                </a>
+                
+                <a href="list.html">
+                    <div class="cards" style="display:none;" onclick="cityList('chennai')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
                         alt="City Image 5">
-                    <div class="city_name">Chennai</div>
-                </div>
-
-                <div class="cards" style="display:none;">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" alt="City Image 6">
-                    <div class="city_name">Agra</div>
-                </div>
-
-                <div class="cards" style="display:none;">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
+                        <div class="city_name">Chennai</div>
+                    </div>
+                </a>
+                
+                <a href="list.html">
+                    <div class="cards" style="display:none;" onclick="cityList('agra')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg" alt="City Image 6">
+                        <div class="city_name">Agra</div>
+                    </div>
+                </a>
+                
+                <a href="list.html">
+                    <div class="cards" style="display:none;" onclick="cityList('jaipur')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
                         alt="City Image 7">
-                    <div class="city_name">Jaipur</div>
-                </div>
-
-                <div class="cards" style="display:none;">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
+                        <div class="city_name">Jaipur</div>
+                    </div>
+                </a>
+                
+                <a href="list.html">
+                    <div class="cards" style="display:none;" onclick="cityList('bengaluru')">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
                         alt="City Image 8">
-                    <div class="city_name">Bengaluru</div>
-                </div>
+                        <div class="city_name">Bengaluru</div>
+                    </div>
+                </a>
+                
             </div>
-
+            
             <div>
                 <div class="d-flex justify-content-center align-items-center container" onclick="view()" id="view_more_div">
                     <a>
@@ -86,10 +101,10 @@
                 </div>
             </div>
         </div>
-
+        
         <footer></footer>
     </div>
-
+    
     <script src="scripts/common.js"></script>
     <script src="scripts/index.js"></script>
 </body>
