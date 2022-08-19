@@ -1,3 +1,9 @@
+// Access Key for API. Please input your Access Key for API to work properly.
+// Get your API key for Hotels API by api dojo from https://rapidapi.com/apidojo/api/hotels4/pricing
+// Key 1 : dfc5114d20mshcb87254d467e008p1945e8jsnce449f125de8
+// Key 2 : 6bbf55f842mshe4958b387597262p193138jsn46840aeff3e6
+var key = '6bbf55f842mshe4958b387597262p193138jsn46840aeff3e6';
+
 const xhr = new XMLHttpRequest();
 
 //Getting the City Name from Index.html
@@ -33,35 +39,42 @@ var destinationId = {
 }
 
 // Acts as a parameter for getting List of Hotels
-var cityID = destinationId[city];
-console.log(cityID);
-
-
+if (destinationId[city] !== null && destinationId[city] !== undefined) {
+    var cityID = destinationId[city];
+    console.log(cityID+` is found in JS Object`);
+    List();
+} else {
+    inputCityID(city);
+}
 
 //Getting the Destination Id from the Server but using an Object containing Destination IDs to save on API Calls.
 
-// const cityID = function () {
-//     const xhr = new XMLHttpRequest();
-//     const data = null;
+function inputCityID(cityName) {
+    const xhr = new XMLHttpRequest();
+    const data = null;
 
-//     xhr.addEventListener("readystatechange", function () {
-//         if (this.readyState === this.DONE) {
-//             // console.log(JSON.parse(this.responseText));
-//             console.log(JSON.parse(this.response));
-//             // localStorage.setItem('queryResponse', JSON.parse(this.response));
-//             var response = JSON.parse(this.response);
-//             console.log("City Id / Destination Id = " + response.suggestions[0].entities[0].destinationId);
-//             return response.suggestions[0].entities[0].destinationId;
-//         }
-//     });
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            // console.log(JSON.parse(this.responseText));
+            console.log(JSON.parse(this.response));
+            // localStorage.setItem('queryResponse', JSON.parse(this.response));
+            var response = JSON.parse(this.response);
+            console.log("City Id / Destination Id fetched from server = " + response.suggestions[0].entities[0].destinationId);
+            cityID = response.suggestions[0].entities[0].destinationId;
+            
+            console.log(cityID+` fetched from server`);
 
-//     xhr.open("GET", `https://hotels4.p.rapidapi.com/locations/v2/search?query=${city}&locale=en_US&currency=INR`);
-//     xhr.setRequestHeader("X-RapidAPI-Key", "dfc5114d20mshcb87254d467e008p1945e8jsnce449f125de8");
-//     xhr.setRequestHeader("X-RapidAPI-Host", "hotels4.p.rapidapi.com");
+            // Calling List function after fetching the City ID.
+            List();
+        }
+    });
 
-//     xhr.send(data);
-// }
+    xhr.open("GET", `https://hotels4.p.rapidapi.com/locations/v2/search?query=${cityName}&locale=en_US&currency=INR`);
+    xhr.setRequestHeader("X-RapidAPI-Key", `${key}`);
+    xhr.setRequestHeader("X-RapidAPI-Host", "hotels4.p.rapidapi.com");
 
+    xhr.send(data);
+}
 
 
 function List() {
@@ -103,22 +116,22 @@ function List() {
 
             });
 
+            // Adding Map View after List View
+            document.getElementById('content').innerHTML += `<div id="map_view">
+            <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="Map Image">
+            </div>`;
+            
+            // Calling Remove Loader Function after the List has been Loaded
+            removeLoader();
         }
     });
 
     xhr.open("GET", `https://hotels4.p.rapidapi.com/properties/list?destinationId=${cityID}&pageNumber=1&pageSize=25&checkIn=${today}&checkOut=${tomorrow}&adults1=1&locale=en_US&currency=INR`);
-    xhr.setRequestHeader("X-RapidAPI-Key", "dfc5114d20mshcb87254d467e008p1945e8jsnce449f125de8");
+    xhr.setRequestHeader("X-RapidAPI-Key", `${key}`);
     xhr.setRequestHeader("X-RapidAPI-Host", "hotels4.p.rapidapi.com");
 
     xhr.send(data);
 }
-
-if (cityID !== undefined || cityID !== null) { List(); }
-
-
-
-
-
 
 
 // To convert String to Title Case
@@ -133,11 +146,16 @@ function toTitleCase(str) {
 
 // console.log(toTitleCase(city));
 
-function details(hotelId, hotelName, hotelImage, hotelRating, city){
+function details(hotelId, hotelName, hotelImage, hotelRating, city) {
     console.log('In the Details');
     localStorage.setItem('hotelId', hotelId);
     localStorage.setItem('hotelName', hotelName);
     localStorage.setItem('hotelImage', hotelImage);
     localStorage.setItem('hotelRating', hotelRating);
     localStorage.setItem('city', city);
+}
+
+function removeLoader(){
+    document.getElementById('preload-container').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
 }

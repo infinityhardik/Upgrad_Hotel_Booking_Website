@@ -15,14 +15,18 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
-<body>
-    <div id="main">
+<body onload="removeLoader()">
+    <div id="preload-container">
+        <div class="loader"></div>
+    </div>
+
+    <div id="main" style="display: none;">
         <header></header>
         
         <div id="content">
             <div id="search_bar">
-                <form action="index.html">
-                    <input type="text" placeholder="City">
+                <form action="list.html" onsubmit="search(searchCity)">
+                    <input type="text" placeholder="City" id="searchCity">
                 </form>
             </div>
             

@@ -24,6 +24,15 @@ function view() {
 
 }
 
+
+// Input Field City Name passed on to cityList function for Storage
+function search(searchCity) {
+    // console.log(searchCity.value);
+    cityList(searchCity.value);
+}
+
+
+
 // Sets the City Name into the Storage
 function cityList(cityName) {
     console.log(cityName);

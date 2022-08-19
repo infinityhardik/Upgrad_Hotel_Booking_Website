@@ -16,16 +16,18 @@
     <link rel="stylesheet" href="styles/detail.css">
 </head>
 <body>
-    <div id="main">
+
+    <div id="preload-container">
+        <div class="loader"></div>
+    </div>
+
+    <div id="main" style="display: none;">
         <header></header>
         
         <div id="content">
             <div class="box">
                 <div id="hotel_img" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" id="carousel_images">
-                        <!-- <div class="carousel-item active ">
-                            <img class="d-block" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Radisson Blu Hotel">
-                        </div> -->
                     </div>
                     <a class="carousel-control-prev" href="#hotel_img" role="button" data-slide="prev">
                         <h1><</h1>
@@ -63,7 +65,7 @@
                         </div>
                         
                         <div class="form_row">
-                            <button class="btn btn-outline-success" type="submit">Book Now</button>
+                            <button class="btn btn-outline-success" type="submit" id="Book_Now">Book Now</button>
                         </div>
                     </form>
                 </div>

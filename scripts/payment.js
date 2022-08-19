@@ -47,4 +47,13 @@ function display() {
     document.querySelector("#hotel_description").innerHTML += hotel;
 
     document.querySelector('#hotel_img').innerHTML +=`<img src="${hotelImage}">`;
+    
+    // Calling Remove Loader Function after the List has been Loaded
+    removeLoader();
+}
+
+
+function removeLoader(){
+    document.getElementById('preload-container').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
 }

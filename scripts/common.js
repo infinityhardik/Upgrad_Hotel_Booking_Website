@@ -1,3 +1,8 @@
+var removeLoader = () => {
+    document.getElementById('preload-container').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
+}
+
 function header() {
     var str = `<a href="index.html" target="_self">
     <img src="assests/images/logo.png" alt="logo" height="60px" width="60px">
